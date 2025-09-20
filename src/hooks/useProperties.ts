@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { Property } from '@/types'
-
-const ENDPOINT = 'https://s3.us-central-1.wasabisys.com/mashvisor-cdn/task-fe-listings.json'
+import {mashapi} from'../services/api.js'
+const ENDPOINT = mashapi
 
 const FALLBACK: Property[] = [
   {

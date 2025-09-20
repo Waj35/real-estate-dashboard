@@ -1,5 +1,7 @@
 import React from "react";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
+import { apiKey } from "../services/api";
+
 
 type Props = {
   lat: number;
@@ -21,7 +23,6 @@ const getRandomCoords = () => {
 };
 
 export default function GMap({ lat, lng, title }: Props) {
-  const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string | undefined;
 
   const { isLoaded, loadError } = useJsApiLoader({
     id: "google-map-script",
